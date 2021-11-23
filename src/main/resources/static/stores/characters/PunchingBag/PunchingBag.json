@@ -1,0 +1,145 @@
+{
+	"textures": [
+		{
+			"image": "PunchinBag.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 104,
+				"h": 126
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "PunchingBag_2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 26,
+						"h": 66
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 26,
+						"h": 66
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 26,
+						"h": 66
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "PunchingBag_0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 56
+					},
+					"frame": {
+						"x": 1,
+						"y": 69,
+						"w": 50,
+						"h": 56
+					},
+					"anchor": {
+						"x": 0.74,
+						"y": 1
+					}
+				},
+				{
+					"filename": "PunchingBag_1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 64
+					},
+					"frame": {
+						"x": 29,
+						"y": 1,
+						"w": 32,
+						"h": 64
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				},
+				{
+					"filename": "PunchingBag_4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 56
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 56
+					},
+					"frame": {
+						"x": 53,
+						"y": 67,
+						"w": 50,
+						"h": 56
+					},
+					"anchor": {
+						"x": 0.26,
+						"y": 1
+					}
+				},
+				{
+					"filename": "PunchingBag_3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 64
+					},
+					"frame": {
+						"x": 63,
+						"y": 1,
+						"w": 32,
+						"h": 64
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 1
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:ee143b87f7efa357fe5ad2b4f30fff5a:43c5ca91883386232d8e3b50af722d5e:16893ca9771bec9ad050db43a4363236$"
+	}
+}

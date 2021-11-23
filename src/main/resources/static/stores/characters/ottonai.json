@@ -1,0 +1,395 @@
+{
+	"textures": [
+		{
+			"image": "ottonai.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 124,
+				"h": 933
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "ottonai_JumpAttack1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 114,
+						"h": 114
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 114,
+						"h": 114
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 114,
+						"h": 114
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "ottonai_normalAttack2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 111,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 111,
+						"h": 83
+					},
+					"frame": {
+						"x": 1,
+						"y": 117,
+						"w": 111,
+						"h": 83
+					},
+					"anchor": {
+						"x": 0.37837838,
+						"y": 1
+					}
+				},
+				{
+					"filename": "ottonai_downAttack1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 99,
+						"h": 73
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 99,
+						"h": 73
+					},
+					"frame": {
+						"x": 1,
+						"y": 202,
+						"w": 99,
+						"h": 73
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "ottonai_downAttack2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 99,
+						"h": 72
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 99,
+						"h": 72
+					},
+					"frame": {
+						"x": 1,
+						"y": 277,
+						"w": 99,
+						"h": 72
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "ottonai_normalAttack1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 92,
+						"h": 107
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 92,
+						"h": 107
+					},
+					"frame": {
+						"x": 1,
+						"y": 351,
+						"w": 92,
+						"h": 107
+					},
+					"anchor": {
+						"x": 0.347826,
+						"y": 0.616822
+					}
+				},
+				{
+					"filename": "ottonai_JumpDownAttack0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 66,
+						"h": 86
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 66,
+						"h": 86
+					},
+					"frame": {
+						"x": 1,
+						"y": 460,
+						"w": 66,
+						"h": 86
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "ottonai_idle.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 54,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 54,
+						"h": 83
+					},
+					"frame": {
+						"x": 69,
+						"y": 460,
+						"w": 54,
+						"h": 83
+					},
+					"anchor": {
+						"x": 0.77777778,
+						"y": 1
+					}
+				},
+				{
+					"filename": "ottonai_jump.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 54,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 54,
+						"h": 83
+					},
+					"frame": {
+						"x": 69,
+						"y": 545,
+						"w": 54,
+						"h": 83
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "ottonai_dash.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 65,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 65,
+						"h": 83
+					},
+					"frame": {
+						"x": 1,
+						"y": 548,
+						"w": 65,
+						"h": 83
+					},
+					"anchor": {
+						"x": 0.7076923076923077,
+						"y": 1
+					}
+				},
+				{
+					"filename": "ottonai_walk0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 54,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 54,
+						"h": 83
+					},
+					"frame": {
+						"x": 68,
+						"y": 630,
+						"w": 54,
+						"h": 83
+					},
+					"anchor": {
+						"x": 0.77777778,
+						"y": 1
+					}
+				},
+				{
+					"filename": "ottonai_JumpAttack0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 86
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 86
+					},
+					"frame": {
+						"x": 1,
+						"y": 633,
+						"w": 64,
+						"h": 86
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				},
+				{
+					"filename": "ottonai_walk1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 54,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 54,
+						"h": 83
+					},
+					"frame": {
+						"x": 67,
+						"y": 715,
+						"w": 54,
+						"h": 83
+					},
+					"anchor": {
+						"x": 0.7777777777777778,
+						"y": 1
+					}
+				},
+				{
+					"filename": "ottonai_normalAttack0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 110
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 110
+					},
+					"frame": {
+						"x": 1,
+						"y": 721,
+						"w": 63,
+						"h": 110
+					},
+					"anchor": {
+						"x": 0.428571,
+						"y": 0.618182
+					}
+				},
+				{
+					"filename": "ottonai_walk2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 54,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 54,
+						"h": 83
+					},
+					"frame": {
+						"x": 66,
+						"y": 800,
+						"w": 54,
+						"h": 83
+					},
+					"anchor": {
+						"x": 0.7777777777777778,
+						"y": 1
+					}
+				},
+				{
+					"filename": "ottonai_downAttack0.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 63,
+						"h": 99
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 63,
+						"h": 99
+					},
+					"frame": {
+						"x": 1,
+						"y": 833,
+						"w": 63,
+						"h": 99
+					},
+					"anchor": {
+						"x": 0.5,
+						"y": 0.5
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:5b4a6c759b4c11991934cd32bb6607c1:dfecfdb3b82e069de5e4f0a8238087e1:c4a9176b0fabf4ec39023dc2aabd5957$"
+	}
+}

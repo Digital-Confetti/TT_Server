@@ -1,0 +1,37 @@
+body {  
+    background-repeat: repeat;
+    background-color: #696969;
+}
+
+canvas {
+	position: fixed;
+	top: 10px;
+}
+
+#chatbox{
+	text-align: left;
+	background-color: rgb(145, 145, 146);
+	height:700px;
+	width:530px;
+	border:1px solid;
+	overflow: auto;
+}
+
+#usermsg{
+	width:475px;
+}
+
+#submit{
+	width:30px;
+}
+
+#full-item{
+	position: fixed;
+	right: 10px;
+	margin-bottom: 10px;
+	padding-left: 150px;
+}
+
+body{
+	font-family: 'Gemunu Libre';
+}

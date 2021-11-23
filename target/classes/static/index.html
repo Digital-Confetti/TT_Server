@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+
+        <style> @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@800&display=swap%27'); </style>
+        <!--
+        <meta name = "viewport" content="width=device-width, initial scale=1">
+        -->
+        <!-- Cargamos el fichero de estilo -->
+        <link rel="stylesheet" href="style.css"> 
+        <!-- Usamos un cdn -->
+        <!-- Phaser 3 -->
+        <script src="//cdn.jsdelivr.net/npm/phaser@3.20.1/dist/phaser.js"></script>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="index.js" type="module"></script>
+        <script src="/scripts/chatBox.js"></script>
+         
+        <!-- Ponemos un título -->
+    <!-- 
+	justify-content: center;
+    align-items: center;
+	background-image: url("https://i.gifer.com/fetch/w300-preview/ac/acdfc152a8fbf2211c260aae4887a326.gif"); 
+	-->
+        <title>Digital Confetti</title>
+    </head>
+    
+    <body>    
+        <div id="full-item">
+                <div id="chatbox">
+                </div>
+                <div id="messageAction">
+                </div>
+                <div id="userdata">
+                    <input type="text" id="nick"/>
+                    <input type="button" id="setName" value="set Nickname"/>
+                    <label for="setColor">Choose color: </label>
+                    <select id="setColor">
+                        <option value="magenta">Magenta</option>
+                        <option value="red">Red</option>
+                        <option value="orange">Orange</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="cyan">Cyan</option>
+                        <option value="blue">Blue</option>
+                        <option value="violet">Violet</option>
+                </select>
+                </div>
+        </div >
+          
+    </body>
+</html>
