@@ -43,7 +43,6 @@ public class MessageController {
 	//POST->Mensajes
 	@PostMapping("{lobby}")
 	public ResponseEntity<Boolean> postMessage(@RequestBody Message message, @PathVariable("lobby") String lobby){
-		System.out.println(message.toCsv(":"));
 		boolean out  = conmutron.addMessage(message, lobby);
 		return new ResponseEntity<Boolean>(true, HttpStatus.CREATED);
 	}

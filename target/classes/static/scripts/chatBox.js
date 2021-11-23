@@ -2,6 +2,15 @@ var aux = window.location + "get/";
 
 var Color = "black";
 
+//player name
+var player;
+    
+// lobby id
+var lobby;
+
+// timer
+var timer;
+
 function setColor (c)
 {
     Color = c;
@@ -37,13 +46,13 @@ function sendPlayer(newplayer, callback){
         // Vaciamos el user data y ponemos un display del nombre
         let userData = $("#userdata");
         userData.empty();
-        userData.append('<p><b>'+ player +'</b></p>');
+        userData.append('<p><b>'+ player +'</b> tu lobby es el: '+ lobby +'</p>');
 
         // Programamos el evento pulsar el submit
         $('#submitmsg').click( function () {
             let plainText = $("#usermsg").val();
             var now = new Date();
-            now = now.toLocaleString();
+            now = "> " + now.toLocaleString();
             var pickedColor = Color;
 
             var msg = {
@@ -111,24 +120,8 @@ function pingServer()
 
 
 $(document).ready(function () {
-
-    var userData = $("#userdata");
     var setName = $("#setName");
     var nick = $("#nick");
-
-    var msgAction = $('#messageAction');
-    var submit = $('#submitmsg');
-    var msg = $('#usermsg');
-    var chatBox = $('#chatbox');
-    
-    //player name
-    var player;
-    
-    // lobby id
-    var lobby;
-
-    // timer
-    var timer;
 
     //Boton asociado al addPlayer()
     setName.click( function () {

@@ -19,7 +19,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-public class Lobby {
+public class Lobby {	
+	// Definimos las constantes de la clave
+	final private String KEYSET = "ABCDEFGHIJKLMNOPQRSTUVXYZ0123456789";
+	final private int KEYSIZE = 8;
 	
 	//Unique identification
 	private String id;
@@ -28,9 +31,6 @@ public class Lobby {
 	private final int maxPlayers;
 	
 	private final int maxMsgs = 15;
-	
-	//Lista de los jugadores adscritos 
-	private List<String> playerList;
 	
 	//Mapa encargado de guardar el estado de conexion de los players.
 	private Map<String, Boolean> conectionMap;
@@ -57,8 +57,6 @@ public class Lobby {
 		}
 	});
 	
-	final private String KEYSET = "ABCDEFGHIJKLMNOPQRSTUVXYZ0123456789";
-	final private int KEYSIZE = 8;
 	
 	// Genera una ID unica
 	private String generate_Id()
@@ -82,9 +80,6 @@ public class Lobby {
 		// Seteamos el maximo de jugadores por Lobby
 		this.maxPlayers = maxPlayer;
 		
-		// Creamos la lista de jugadores
-		this.setPlayerList(new ArrayList<String>());
-		
 		// Mapa de conexiones (Comprobar desconexiones)
 		this.conectionMap = new HashMap<String, Boolean>();
 		
@@ -94,9 +89,16 @@ public class Lobby {
 		this.timer.start();
 		
 	}
-
-	private void setPlayerList(ArrayList<String> arrayList) {
-		this.playerList = arrayList;	
+	
+	public String toString()
+	{
+		String out = "Lobby: " + this.id + "\n";
+		out +="playerList: \n";
+		for(Entry<String, Boolean> p: conectionMap.entrySet()){
+			out += "\t" + p.getKey() + "\n";
+		}
+		out += "size: "+ this.getNumPlayers() + "/" + this.maxPlayers;
+		return out;
 	}
 
 	public String getId() {
@@ -122,8 +124,8 @@ public class Lobby {
 	//Funcionalidad propia de la sala para dictaminar si ya hay alguien con ese nombre en la sala
 	private boolean isPlayerOn(Player player){
 		String name = player.getName();
-		for (int i = 0; i < this.playerList.size(); i++){
-			if (name.equals(this.playerList.get(i))){
+		for(Entry<String, Boolean> p: conectionMap.entrySet()){
+			if(p.getKey().equals(name)){
 				return true;
 			}
 		}
@@ -139,22 +141,10 @@ public class Lobby {
 			return null;
 		} 
 		
-		/*
-		 * 
-		else if (this.maxPlayers == this.conectionMap.size()) {
-			// 02->La sala está llená
-			return "ERROR 02";
-		}
-		 * 
-		 */
-		
 		//Añadimos al jugador a la lista de jugadores conectados
 		conectionMap.put(name, true);
 		systemMessage(name, "se ha conectado.");
 		player.setLobby(this.id);
-		
-		System.out.println( + this.getNumPlayers() + "/" + this.maxPlayers);
-		
 		return player;
 	}
 	
@@ -182,11 +172,5 @@ public class Lobby {
 			out.add(msg);
 		});
 		return out;
-	}
-	
-	// TO-DO
-	public List<String>  getPlayers()
-	{
-		return null;
 	}
 }

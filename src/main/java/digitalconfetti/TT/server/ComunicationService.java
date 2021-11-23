@@ -1,4 +1,4 @@
-package digitalconfetti.TT.server;
+ package digitalconfetti.TT.server;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,9 +41,11 @@ public class ComunicationService {
 	
 	//Funcionalidad asociada a añadir un jugador al lobby activo
 	public Player addPlayer(String name) {
+		
 		if(this.active.getNumPlayers() < this.lobbySize)
 		{
 			Player aux = this.active.addPlayer(name);
+			System.out.println(this.active.toString());
 			return aux;
 		} 
 		return null;
@@ -58,6 +60,7 @@ public class ComunicationService {
 				out.addAll(l.getMessages(name));
 			}
 		});
+		System.out.println(this.active.toString());
 		return out;
 	}
 	
@@ -68,6 +71,7 @@ public class ComunicationService {
 				item.addMsg(m);
 			}
 		});
+		System.out.println(this.active.toString());
 		return true;
 	}
 

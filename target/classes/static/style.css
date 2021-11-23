@@ -11,7 +11,7 @@ canvas {
 #chatbox{
 	text-align: left;
 	background-color: rgb(145, 145, 146);
-	height:700px;
+	height: 400px;
 	width:530px;
 	border:1px solid;
 	overflow: auto;
