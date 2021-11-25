@@ -83,10 +83,10 @@ function sendPlayer(newplayer, callback){
 
 }
 
-//  POST -> MENSAJE
+//  PUT -> MENSAJE
 function sendMassage( msg, callback) {
     $.ajax({
-        method: "POST",
+        method: "PUT",
         url: aux + lobby,
         data: JSON.stringify(msg),
         processData: false,

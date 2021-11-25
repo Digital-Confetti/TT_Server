@@ -40,14 +40,17 @@ public class MessageController {
 		return out;
 	}
 	
-	//POST->Mensajes
-	@PostMapping("{lobby}")
+	//PUT->Mensajes
+	@PutMapping("{lobby}")
 	public ResponseEntity<Boolean> postMessage(@RequestBody Message message, @PathVariable("lobby") String lobby){
 		boolean out  = conmutron.addMessage(message, lobby);
-		return new ResponseEntity<Boolean>(true, HttpStatus.CREATED);
+		return new ResponseEntity<Boolean>(out, HttpStatus.CREATED);
 	}
 	
 	//GET->Mensajes
+	// Este método 2 cosas principalmente:
+	// 		->Devolver la peticion Get con los mensajes del lobby preguntado
+	// 		->Mantener conectado al usuario player, que hará esta petición de manera periodica
 	@GetMapping("{lobby}/{name}")
 	public List<Message> getMessages(@PathVariable("lobby") String lobby, @PathVariable("name") String name){
 		List<Message> out = this.conmutron.getMessages(lobby, name);
