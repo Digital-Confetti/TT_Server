@@ -114,7 +114,7 @@ public class Lobby {
 	}
 
 	//Funcionalidad propia de la sala para emitir mensajes en nombre del sistema
-	private void systemMessage(String player_Name,String body) {
+	private void systemMessage(String player_Name, String body) {
 		DateFormat formatter = new SimpleDateFormat("> dd/MM/yyy hh:mm:ss");
 		Date now = new Date();
 		Message m = new Message("System", formatter.format(now), player_Name + " " + body, "brown");
@@ -164,7 +164,7 @@ public class Lobby {
 	}
 	
 	//Funcion que devuelve los mensajes de esa sala
-	public List<Message> getMessages(){
+	private List<Message> getMessages(){
 		List<Message> aux = mStorage.ReadMessages_inverse();
 		List<Message> out  = new ArrayList<Message>();
 		int n = 0;

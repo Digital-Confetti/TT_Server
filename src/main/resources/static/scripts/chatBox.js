@@ -34,8 +34,6 @@ function sendPlayer(newplayer, callback){
         // lobby returned
         console.log(data.lobby);
         lobby = data.lobby;
-
-
         
         // Rellenamos lon la interfaz de chat
         let msgAction = $("#messageAction");
@@ -65,6 +63,7 @@ function sendPlayer(newplayer, callback){
             if(plainText != ''){
                 sendMassage(msg, pingServer);
             }
+
             //Borramos el field text
             $("#usermsg").val('');
         });
@@ -105,7 +104,6 @@ function pingServer()
     $.ajax({
         url: aux + lobby + '/' + player,
     }).done(function (info) {
-        console.log("Limpio");
         let chat = $("#chatbox");
         let out;
         chat.empty();
@@ -120,11 +118,10 @@ function pingServer()
 
 
 $(document).ready(function () {
-    var setName = $("#setName");
     var nick = $("#nick");
 
     //Boton asociado al addPlayer()
-    setName.click( function () {
+    $("#setName").click( function () {
         let aux = nick.val();
         player = aux;
         nick.val("");

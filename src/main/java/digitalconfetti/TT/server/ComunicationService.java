@@ -11,7 +11,7 @@ import digitalconfetti.TT.server.Items.Lobby;
 import digitalconfetti.TT.server.Items.Message;
 import digitalconfetti.TT.server.Items.Player;
 
-@Component
+@Service
 public class ComunicationService {
 
 	private List<Lobby> lobbyList = new ArrayList<Lobby>();

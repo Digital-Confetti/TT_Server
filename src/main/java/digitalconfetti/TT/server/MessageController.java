@@ -30,7 +30,7 @@ import digitalconfetti.TT.server.Items.Player;
 public class MessageController {
 
 	@Autowired
-	ComunicationService conmutron;
+	ComunicationService conmutron = new ComunicationService();
 	
 	//POST->Player
 	@PostMapping()
@@ -40,7 +40,7 @@ public class MessageController {
 		return out;
 	}
 	
-	//PUT->Mensajes
+	//PUT->Mensaje
 	@PutMapping("{lobby}")
 	public ResponseEntity<Boolean> postMessage(@RequestBody Message message, @PathVariable("lobby") String lobby){
 		boolean out  = conmutron.addMessage(message, lobby);
@@ -56,5 +56,7 @@ public class MessageController {
 		List<Message> out = this.conmutron.getMessages(lobby, name);
 		return out;
 	}
+	
+	
 	
 }

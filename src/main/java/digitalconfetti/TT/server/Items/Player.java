@@ -4,7 +4,7 @@ public class Player {
 	
 	//Nombre del jugador
 	private String name;
-	
+		
 	private String lobby;
 	
 	public String getName() {
