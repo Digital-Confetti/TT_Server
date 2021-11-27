@@ -69,7 +69,7 @@ function sendPlayer(newplayer, callback){
         });
 
         //Veces por segundo que mandara su estado el cliente
-        refreshRate = 1;
+        refreshRate = 1.4
 
         //Creamos el timer
         timer = setInterval(function () {
@@ -106,7 +106,9 @@ function pingServer()
     }).done(function (info) {
         let chat = $("#chatbox");
         let out;
+        // Limpiamos el contenedor
         chat.empty();
+        // Concatenamos todos los mensajes
         for (i = 0; i < info.length; i++){
             out = '<p>' + info[i].date;
             out += '- <label style="color:'+ info[i].color + '"><b>' + info[i].user + "</b>: " + info[i].text;

@@ -1,6 +1,7 @@
  package digitalconfetti.TT.server;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,28 +28,37 @@ public class ComunicationService {
 		this.lobbyList.add(0, this.active);
 	}
 	
-	public void checkActivelLobby()
+	private Lobby getActiveLobby() {
+		Iterator<Lobby> it = this.lobbyList.iterator();
+		while(it.hasNext())
+		{
+			Lobby i = it.next();
+			if (i.getNumPlayers() < this.lobbySize) {
+				return i;
+			}	
+		}
+		return null;
+			
+	}
+	
+	private void checkActivelLobby()
 	{
-		lobbyList.forEach((lobby) -> {
-			if (lobby.getNumPlayers() < this.lobbySize) {
-				this.active = lobby;
-				return;
-			}
-		});
+		if (this.active.getNumPlayers() >= this.lobbySize)
+		{
+			Lobby l = new Lobby(lobbySize);
+			lobbyList.add(l);
+		} 
 		
-		
+		this.active = this.getActiveLobby();
 	}
 	
 	//Funcionalidad asociada a añadir un jugador al lobby activo
 	public Player addPlayer(String name) {
+		Player aux = this.active.addPlayer(name);
+		System.out.println(this.active.toString());
+		this.checkActivelLobby();
+		return aux;
 		
-		if(this.active.getNumPlayers() < this.lobbySize)
-		{
-			Player aux = this.active.addPlayer(name);
-			System.out.println(this.active.toString());
-			return aux;
-		} 
-		return null;
 	}
 	
 	//getMessages()
@@ -60,7 +70,6 @@ public class ComunicationService {
 				out.addAll(l.getMessages(name));
 			}
 		});
-		System.out.println(this.active.toString());
 		return out;
 	}
 	
